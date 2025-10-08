@@ -1,6 +1,6 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: DevOps Generator
+description: Just send your repository, simsalabim jadi Dockerfile dan K8S manifests.
+author: Ahmad Ardiansyah
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
@@ -9,16 +9,22 @@ branding:
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  language:
+    description: Set your language programming
     required: true
-    default: '1000'
+    default: 'node'
+  name:
+    description: Please give the name of your's app
+    required: true
+    default: 'super-app'
 
 # Define your outputs here.
 outputs:
-  time:
-    description: Your output description here
+  docker:
+    description: Generated dockerfile
+  k8s:
+    description: Generated kubernetes
 
 runs:
-  using: node24
+  using: node22
   main: dist/index.js

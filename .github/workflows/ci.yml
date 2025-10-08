@@ -57,7 +57,8 @@ jobs:
         id: test-action
         uses: ./
         with:
-          milliseconds: 2000
+          name: "testing-app"
+          language: "python"
 
       - name: Print Output
         id: output
