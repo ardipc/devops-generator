@@ -1,5 +1,6 @@
 name: DevOps Generator
-description: Just send your repository, simsalabim jadi Dockerfile dan K8S manifests.
+description:
+  Just send your repository, simsalabim jadi Dockerfile dan K8S manifests.
 author: Ahmad Ardiansyah
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
@@ -26,5 +27,5 @@ outputs:
     description: Generated kubernetes
 
 runs:
-  using: node22
+  using: node24
   main: dist/index.js
